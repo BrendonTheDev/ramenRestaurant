@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+}
+
+#nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+}

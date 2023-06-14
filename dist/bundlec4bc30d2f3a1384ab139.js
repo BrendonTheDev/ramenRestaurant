@@ -120,9 +120,17 @@ body {
 }
 
 #tab-content {
+  height: 100vh;
   background-color: aqua;
 }
-`, "",{"version":3,"sources":["webpack://./src/styles/styles.css"],"names":[],"mappings":"AAAA;;;EAGE,sBAAsB;AACxB;AACA;EACE,SAAS;EACT,UAAU;AACZ;;AAEA;EACE,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,qBAAqB;AACvB;;AAEA;EACE,sBAAsB;AACxB","sourcesContent":["*,\n*::before,\n*::after {\n  box-sizing: border-box;\n}\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n#content {\n  display: flex;\n  flex-direction: column;\n}\n\n#nav {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  background-color: red;\n}\n\n#tab-content {\n  background-color: aqua;\n}\n"],"sourceRoot":""}]);
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+`, "",{"version":3,"sources":["webpack://./src/styles/styles.css"],"names":[],"mappings":"AAAA;;;EAGE,sBAAsB;AACxB;AACA;EACE,SAAS;EACT,UAAU;AACZ;;AAEA;EACE,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,qBAAqB;AACvB;;AAEA;EACE,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,mBAAmB;EACnB,6BAA6B;AAC/B","sourcesContent":["*,\n*::before,\n*::after {\n  box-sizing: border-box;\n}\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n#content {\n  display: flex;\n  flex-direction: column;\n}\n\n#nav {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  background-color: red;\n}\n\n#tab-content {\n  height: 100vh;\n  background-color: aqua;\n}\n\n.home {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  /* justify-content: center; */\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -664,4 +672,4 @@ function init() {
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle9b430b737c507b7c9745.js.map
+//# sourceMappingURL=bundlec4bc30d2f3a1384ab139.js.map

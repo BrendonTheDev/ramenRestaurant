@@ -2,6 +2,38 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/home.js":
+/*!*********************!*\
+  !*** ./src/home.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function createHome() {
+  var home = document.createElement("div");
+  home.classList.add("home");
+  var title = document.createElement("h2");
+  title.classList.add("title");
+  title.textContent = "Ichiraku Ramen";
+  home.appendChild(title);
+  var para = document.createElement("p");
+  para.classList.add("para");
+  para.textContent = "Delicious ramen from your favorite anime!";
+  home.appendChild(para);
+  return home;
+}
+function loadHome() {
+  var tabContent = document.getElementById("tab-content");
+  var homeSection = createHome();
+  tabContent.appendChild(homeSection);
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadHome);
+
+/***/ }),
+
 /***/ "./src/initLoad.js":
 /*!*************************!*\
   !*** ./src/initLoad.js ***!
@@ -30,10 +62,17 @@ function createNav(id) {
   nav.appendChild(contactBtn);
   return nav;
 }
+function createTabContent(id) {
+  var tabContent = document.createElement("div");
+  tabContent.setAttribute("id", id);
+  return tabContent;
+}
 function loadPage() {
   var content = document.getElementById("content");
   var nav = createNav("nav");
   content.appendChild(nav);
+  var tabContent = createTabContent("tab-content");
+  content.appendChild(tabContent);
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadPage);
 
@@ -79,7 +118,11 @@ body {
   justify-content: center;
   background-color: red;
 }
-`, "",{"version":3,"sources":["webpack://./src/styles/styles.css"],"names":[],"mappings":"AAAA;;;EAGE,sBAAsB;AACxB;AACA;EACE,SAAS;EACT,UAAU;AACZ;;AAEA;EACE,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,qBAAqB;AACvB","sourcesContent":["*,\n*::before,\n*::after {\n  box-sizing: border-box;\n}\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n#content {\n  display: flex;\n  flex-direction: column;\n}\n\n#nav {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  background-color: red;\n}\n"],"sourceRoot":""}]);
+
+#tab-content {
+  background-color: aqua;
+}
+`, "",{"version":3,"sources":["webpack://./src/styles/styles.css"],"names":[],"mappings":"AAAA;;;EAGE,sBAAsB;AACxB;AACA;EACE,SAAS;EACT,UAAU;AACZ;;AAEA;EACE,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,qBAAqB;AACvB;;AAEA;EACE,sBAAsB;AACxB","sourcesContent":["*,\n*::before,\n*::after {\n  box-sizing: border-box;\n}\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n#content {\n  display: flex;\n  flex-direction: column;\n}\n\n#nav {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  background-color: red;\n}\n\n#tab-content {\n  background-color: aqua;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -608,11 +651,17 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/styles.css */ "./src/styles/styles.css");
 /* harmony import */ var _initLoad__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./initLoad */ "./src/initLoad.js");
+/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./home */ "./src/home.js");
 
 
-(0,_initLoad__WEBPACK_IMPORTED_MODULE_1__["default"])();
+
+init();
+function init() {
+  (0,_initLoad__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  (0,_home__WEBPACK_IMPORTED_MODULE_2__["default"])();
+}
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle711a2ce96c482e758e69.js.map
+//# sourceMappingURL=bundle9b430b737c507b7c9745.js.map

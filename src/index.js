@@ -1,4 +1,10 @@
 import "./styles/styles.css";
 import loadPage from "./initLoad";
+import loadHome from "./home";
 
-loadPage();
+init();
+
+function init() {
+  loadPage();
+  loadHome();
+}

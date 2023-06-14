@@ -20,11 +20,20 @@ function createNav(id) {
   return nav;
 }
 
+function createTabContent(id) {
+  const tabContent = document.createElement("div");
+  tabContent.setAttribute("id", id);
+  return tabContent;
+}
+
 function loadPage() {
   const content = document.getElementById("content");
 
   const nav = createNav("nav");
   content.appendChild(nav);
+
+  const tabContent = createTabContent("tab-content");
+  content.appendChild(tabContent);
 }
 
 export default loadPage;

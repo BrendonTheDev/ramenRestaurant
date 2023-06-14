@@ -19,3 +19,7 @@ body {
   justify-content: center;
   background-color: red;
 }
+
+#tab-content {
+  background-color: aqua;
+}
